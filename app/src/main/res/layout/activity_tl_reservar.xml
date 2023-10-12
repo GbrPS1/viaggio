@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="1500dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".tl_reservar">
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="45dp"
+            android:text="Explore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:text="Encontre os melhores guias turísticos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Disponibilidade para"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:text="Local"
+            app:layout_constraintStart_toEndOf="@+id/textView45"
+            app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+
+        <View
+            android:id="@+id/descricao_reserva"
+            android:layout_width="357dp"
+            android:layout_height="118dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/imput_txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView50" />
+
+
+        <TextView
+            android:id="@+id/textView49"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:text="Detalhes"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+        <TextView
+            android:id="@+id/textView50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:text="Descrição"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView49" />
+
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="15dp"
+            android:text="Guia"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descricao_reserva" />
+
+        <TextView
+            android:id="@+id/Nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:text="Nome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView53" />
+
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Nome" />
+
+        <TextView
+            android:id="@+id/textView55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="15dp"
+            android:text="Horários"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nome" />
+
+        <ToggleButton
+            android:id="@+id/h1"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/botao_selecionavel"
+            android:textOff="10:00 - 11:00"
+            android:textOn="10:00 - 11:00"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView55" />
+
+        <ToggleButton
+            android:id="@+id/h2"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/botao_selecionavel"
+            android:textOff="11:00 - 12:00"
+            android:textOn="11:00 - 12:00"
+            app:layout_constraintStart_toEndOf="@+id/h1"
+            app:layout_constraintTop_toBottomOf="@+id/textView55" />
+
+        <ToggleButton
+            android:id="@+id/h3"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/botao_selecionavel"
+            android:textOff="12:00 - 13:00"
+            android:textOn="12:00 - 13:00"
+            app:layout_constraintBottom_toTopOf="@+id/h3"
+            app:layout_constraintStart_toEndOf="@+id/h2"
+            app:layout_constraintTop_toBottomOf="@+id/textView55" />
+
+        <ToggleButton
+            android:id="@+id/h6"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/botao_selecionavel"
+            android:textOff="15:00 - 16:00"
+            android:textOn="15:00 - 16:00"
+            app:layout_constraintStart_toEndOf="@+id/h5"
+            app:layout_constraintTop_toBottomOf="@+id/h3" />
+
+        <ToggleButton
+            android:id="@+id/h4"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/botao_selecionavel"
+            android:textOff="13:00 - 14:00"
+            android:textOn="13:00 - 14:00"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/h1" />
+
+        <ToggleButton
+            android:id="@+id/h5"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/botao_selecionavel"
+            android:textOff="14:00 - 15:00"
+            android:textOn="14:00 - 15:00"
+            app:layout_constraintStart_toEndOf="@+id/h4"
+            app:layout_constraintTop_toBottomOf="@+id/h1" />
+
+        <Button
+            android:id="@+id/btn_reservar"
+            android:layout_width="363dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:text="reservar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/h5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout></ScrollView>
