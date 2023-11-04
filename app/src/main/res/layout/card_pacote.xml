@@ -1,0 +1,42 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:cardCornerRadius="8dp"
+    android:cardElevation="4dp"
+    android:cardMaxElevation="8dp"
+    android:cardUseCompatPadding="true"
+    android:cardBackgroundColor="?android:attr/selectableItemBackground">
+
+    <!-- Conteúdo do item do card com layout personalizado -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Imagem de fundo que ocupa todo o espaço -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop" />
+
+        <!-- Elemento com fundo transparente para o texto -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#80000000"> <!-- Cor de fundo transparente #80 + preta -->
+
+            <!-- Texto alinhado na parte inferior -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Título do Card"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:padding="8dp" />
+
+        </View>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
