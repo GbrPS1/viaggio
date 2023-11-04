@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -12,10 +13,25 @@
         android:src="@drawable/background" />
 
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCadastroUserWithIconFirstFragment"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:contentDescription="voltar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/baseline_chevron_left_24"
+            app:iconGravity="start"
+            app:iconSize="38dp"
+            app:iconTint="@color/white" />
+
 
         <TextView
             android:id="@+id/bem_vindo_d"
@@ -38,11 +54,11 @@
             android:padding="16dp">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLogin"
+                android:id="@+id/textInputSignupUserNameUser"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email">
+                android:hint="Nome de usuário">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -53,62 +69,46 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/passwordInputLogin"
+                android:id="@+id/textInputSignupUserFirstName"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10sp"
-                android:hint="Senha">
+                android:hint="Nome">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/btnForgotPassword"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputSignupUserEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:clickable="true"
-                android:fontFamily="@font/inter_medium"
-                android:layout_marginBottom="20sp"
                 android:layout_marginTop="10sp"
-                android:onClick="openForgetPassword"
-                android:text="Esqueceu sua senha?"/>
+                android:hint="Email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCadastrarGoToSecondStep"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_medium"
                 android:paddingVertical="15sp"
+                android:layout_marginTop="20sp"
                 android:textAllCaps="false"
                 android:textSize="15sp"
-                android:text="Entrar" />
+                android:onClick="goToPasswordDefinition"
+                android:text="Próximo" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:clickable="true"
-                android:fontFamily="@font/inter_medium"
-                android:onClick="seuMetodoOnClick"
-                android:text="ou"
-                android:layout_marginVertical="12sp" />
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingVertical="16sp"
-                android:text="Cadastrar"
-                android:fontFamily="@font/inter_medium"
-                android:textSize="15sp"
-                app:strokeColor="@color/md_theme_light_primary"
-                android:textAllCaps="false"
-                android:onClick="abrirCad"/>
         </LinearLayout>
     </RelativeLayout>
 </FrameLayout>

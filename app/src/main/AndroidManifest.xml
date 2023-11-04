@@ -9,8 +9,23 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Viaggio"
+        android:theme="@style/Theme.Viaggio.NoActionBar"
         tools:targetApi="31">
+        <activity
+            android:name=".HomeTurista"
+            android:exported="false" />
+        <activity
+            android:name=".esqueceu_senha.EsqueceuSenha"
+            android:exported="false" />
+        <activity
+            android:name=".cadastro_parceiro.CadastroParceiroContainer"
+            android:exported="false" />
+        <activity
+            android:name=".cadastro_user.CadastroUserContainer"
+            android:exported="false" />
+        <activity
+            android:name=".cadastro_user.CadastroUserContainer"
+            android:exported="false" />
         <activity
             android:name=".tl_editar_tour"
             android:exported="false" />

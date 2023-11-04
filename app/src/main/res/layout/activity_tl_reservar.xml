@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -161,7 +160,8 @@
             android:textOn="12:00 - 13:00"
             app:layout_constraintBottom_toTopOf="@+id/h3"
             app:layout_constraintStart_toEndOf="@+id/h2"
-            app:layout_constraintTop_toBottomOf="@+id/textView55" />
+            app:layout_constraintTop_toBottomOf="@+id/textView55"
+            tools:ignore="NotSibling" />
 
         <ToggleButton
             android:id="@+id/h6"

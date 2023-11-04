@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cadastro_parceiro.FragmentCadastroParceiroSecondStep">
+
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_theme_light_primary"
+        android:scaleType="fitXY"
+        android:src="@drawable/background" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCadastroParceiroWithIcon"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="voltar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/baseline_chevron_left_24"
+            app:iconGravity="start"
+            app:iconSize="38dp"
+            app:iconTint="@color/white" />
+
+
+        <TextView
+            android:id="@+id/bem_vindo"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="88.85dp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="Viaggio."
+            android:textColor="#fff"
+            android:textSize="38sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_gravity="start"
+            android:padding="16dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:fontFamily="@font/inter_medium"
+                android:text="Tipo de documento"
+                android:textSize="15sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rdnSignupParceiroTypeDocumentAsRG"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="RG" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rdnSignupParceiroTypeDocumentAsCPF"
+                    android:layout_width="10dp"
+                    android:layout_weight="1.25"
+                    android:layout_height="wrap_content"
+                    android:text="CPF" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rdnSignupParceiroTypeDocumentAsCNH"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="CNH" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputSignupNDocumentParceiro"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nª Documento">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/md_theme_light_onPrimary"
+                    android:fontFamily="@font/inter_medium"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputSignupUserParceiro"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:hint="Telefone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/md_theme_light_onPrimary"
+                    android:fontFamily="@font/inter_medium"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignupParceiroGoToPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/inter_medium"
+                android:onClick="goToPasswordDefinition"
+                android:paddingVertical="15sp"
+                android:text="Próximo"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

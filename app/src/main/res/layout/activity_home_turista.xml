@@ -1,0 +1,86 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Explore Text -->
+    <TextView
+        android:id="@+id/explore_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Explore"
+        android:textSize="24sp"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/explore_text_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Encontre os melhores guias turísticos"
+        android:textSize="12sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pesquisar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_medium"
+            android:backgroundTint="@color/md_theme_light_onPrimary"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- First Section -->
+    <TextView
+        android:id="@+id/section1_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Destinos"
+        android:textSize="20sp"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"/>
+
+    <!-- List of Cards for Section 1 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/section1_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"/>
+
+    <!-- Second Section -->
+    <TextView
+        android:id="@+id/section2_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guias populares"
+        android:textSize="20sp"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"/>
+
+    <!-- List of Cards for Section 2 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/section2_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"/>
+
+</LinearLayout>
