@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.viaggio.databinding.FragmentInicioTuristaBinding
+import com.example.viaggio.databinding.FragmentNovotourBinding
 
 
 class HomeFragment : Fragment() {
 
-    private var _binding: FragmentInicioTuristaBinding? = null
+    private var _binding: FragmentNovotourBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,7 +25,7 @@ class HomeFragment : Fragment() {
         val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        _binding = FragmentInicioTuristaBinding.inflate(inflater, container, false)
+        _binding = FragmentNovotourBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root

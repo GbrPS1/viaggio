@@ -16,6 +16,10 @@
         android:name="com.example.viaggio.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_novotour" />
-
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.viaggio.ui.notifications.NotificationsFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_notifications" />
 
 </navigation>

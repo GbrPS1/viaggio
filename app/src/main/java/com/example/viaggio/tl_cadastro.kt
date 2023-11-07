@@ -3,6 +3,7 @@ package com.example.viaggio
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.viaggio.cadastro_parceiro.CadastroParceiroContainer
 import com.example.viaggio.cadastro_user.CadastroUserContainer
@@ -26,5 +27,6 @@ class tl_cadastro : AppCompatActivity() {
         val intentCadastroUserContainer = Intent(applicationContext, CadastroUserContainer::class.java)
         startActivity(intentCadastroUserContainer)
     }
+
 
 }

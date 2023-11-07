@@ -3,6 +3,7 @@ package com.example.viaggio
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.viaggio.esqueceu_senha.EsqueceuSenha
 
@@ -15,8 +16,8 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(applicationContext, tl_cadastro::class.java)
         startActivity(intent)
     }
-    fun abrirInicio(v: View?) {
-        val intent1 = Intent(applicationContext, tl_index_turista::class.java)
+    fun abrirHome(v: View?) {
+        val intent1 = Intent(applicationContext, HomeTurista::class.java)
         startActivity(intent1)
     }
     fun openForgetPassword(v: View?) {
@@ -28,5 +29,6 @@ class MainActivity : AppCompatActivity() {
 //        val intent1 = Intent(applicationContext, recuperacaoSenha::class.java)
 //        startActivity(intent1)
     }
+
 
 }

@@ -1,86 +1,241 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
 
-    <!-- Explore Text -->
-    <TextView
-        android:id="@+id/explore_text"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Explore"
-        android:textSize="24sp"
-        android:paddingStart="16dp"
-        android:paddingTop="16dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="8dp"/>
-
-    <TextView
-        android:id="@+id/explore_text_sub"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.HomeFragment"
+        > <ImageView
+        android:id="@+id/backgroundImage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Encontre os melhores guias turísticos"
-        android:textSize="12sp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="8dp"/>
+        android:layout_height="match_parent"
+        android:background="@color/md_theme_light_primary"
+        android:scaleType="fitXY"
+        android:src="@drawable/background" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="382dp"
+            android:layout_height="158dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:paddingLeft="25dp">
+
+            <TextView
+                android:layout_width="382dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="Explore"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="383dp"
+                android:layout_height="32dp"
+                android:paddingBottom="1dp"
+                android:text="Encontre os melhores guias turísticos"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/inputPesquisar"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:background="@drawable/imput_txt"
+                android:hint="Digite aqui"
+                android:paddingLeft="25dp"
+                android:textColor="#333333"
+                android:textSize="16sp" />
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Pesquisar">
+        </LinearLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_medium"
-            android:backgroundTint="@color/md_theme_light_onPrimary"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="25dp"
+            android:text="Destinos"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <!-- First Section -->
-    <TextView
-        android:id="@+id/section1_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Destinos"
-        android:textSize="20sp"
-        android:paddingStart="16dp"
-        android:paddingTop="16dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="8dp"/>
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="142dp"
+            android:layout_height="145dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/rio_de_janeiro"
+            android:onClick="abrirLocal"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <!-- List of Cards for Section 1 -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/section1_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:clipToPadding="false"
-        android:scrollbars="vertical"/>
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="153dp"
+            android:layout_height="133dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/orlando"
+            android:onClick="abrirlocal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <!-- Second Section -->
-    <TextView
-        android:id="@+id/section2_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Guias populares"
-        android:textSize="20sp"
-        android:paddingStart="16dp"
-        android:paddingTop="16dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="8dp"/>
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="142dp"
+            android:layout_height="145dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="34dp"
+            android:background="@drawable/paris"
+            android:onClick="abrirlocal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton1"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <!-- List of Cards for Section 2 -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/section2_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:clipToPadding="false"
-        android:scrollbars="vertical"/>
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="142dp"
+            android:layout_height="145dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/ceara"
+            android:onClick="abrirlocal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:text="Guias populares"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="142dp"
+            android:layout_height="145dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/anderson"
+            android:onClick="abrirPerfilTurista"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="142dp"
+            android:layout_height="145dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/jos_"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="142dp"
+            android:layout_height="145dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="34dp"
+            android:background="@drawable/manda"
+            android:paddingEnd="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton6"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="142dp"
+            android:layout_height="145dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="29dp"
+            android:background="@drawable/cleiton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton7"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <LinearLayout
+            android:layout_width="393dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="35dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton9" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="6dp"
+            android:text="ANDERSON"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="89dp"
+            android:text="JOSÉ"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton7" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="6dp"
+            android:text="AMANDA"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton8" />
+
+        <TextView
+            android:id="@+id/textView48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="85dp"
+            android:text="CLEITON"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton9" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

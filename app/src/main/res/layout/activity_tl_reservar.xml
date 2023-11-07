@@ -46,20 +46,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginTop="24dp"
-            android:text="Local"
+            android:text="Corcovado"
             app:layout_constraintStart_toEndOf="@+id/textView45"
             app:layout_constraintTop_toBottomOf="@+id/textView44" />
-
-
-        <View
-            android:id="@+id/descricao_reserva"
-            android:layout_width="357dp"
-            android:layout_height="118dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/imput_txt"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView50" />
 
 
         <TextView
@@ -88,31 +77,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="15dp"
-            android:text="Guia"
+            android:layout_marginTop="14dp"
+            android:text="Guias Disponveis:"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/descricao_reserva" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
-        <TextView
-            android:id="@+id/Nome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="10dp"
-            android:text="Nome"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="96dp"
+            android:layout_height="93dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="25dp"
+            android:padding="10dp"
+            android:src="@drawable/manda"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView53" />
 
-        <TextView
-            android:id="@+id/nome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="10dp"
-            android:text="TextView"
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="83dp"
+            android:layout_height="85dp"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/manda"
+            android:textOff=" "
+            android:textOn=" "
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Nome" />
+            app:layout_constraintTop_toBottomOf="@+id/textView53" />
+
+
+
 
         <TextView
             android:id="@+id/textView55"
@@ -122,15 +120,16 @@
             android:layout_marginTop="15dp"
             android:text="Horários"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nome" />
+            app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
 
         <ToggleButton
             android:id="@+id/h1"
             android:layout_width="90dp"
-            android:layout_height="35dp"
+            android:layout_height="48dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/botao_selecionavel"
+            android:background="@drawable/selecao_btn"
+            android:checked="true"
             android:textOff="10:00 - 11:00"
             android:textOn="10:00 - 11:00"
             app:layout_constraintStart_toStartOf="parent"
@@ -139,10 +138,11 @@
         <ToggleButton
             android:id="@+id/h2"
             android:layout_width="90dp"
-            android:layout_height="35dp"
+            android:layout_height="48dp"
             android:layout_marginStart="38dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/botao_selecionavel"
+            android:background="@drawable/selecao_btn"
+            android:checked="true"
             android:textOff="11:00 - 12:00"
             android:textOn="11:00 - 12:00"
             app:layout_constraintStart_toEndOf="@+id/h1"
@@ -151,11 +151,12 @@
         <ToggleButton
             android:id="@+id/h3"
             android:layout_width="90dp"
-            android:layout_height="35dp"
+            android:layout_height="48dp"
             android:layout_marginStart="38dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/botao_selecionavel"
+            android:background="@drawable/selecao_btn"
+            android:checked="true"
             android:textOff="12:00 - 13:00"
             android:textOn="12:00 - 13:00"
             app:layout_constraintBottom_toTopOf="@+id/h3"
@@ -166,10 +167,11 @@
         <ToggleButton
             android:id="@+id/h6"
             android:layout_width="90dp"
-            android:layout_height="35dp"
+            android:layout_height="48dp"
             android:layout_marginStart="38dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/botao_selecionavel"
+            android:background="@drawable/selecao_btn"
+            android:checked="true"
             android:textOff="15:00 - 16:00"
             android:textOn="15:00 - 16:00"
             app:layout_constraintStart_toEndOf="@+id/h5"
@@ -178,10 +180,11 @@
         <ToggleButton
             android:id="@+id/h4"
             android:layout_width="90dp"
-            android:layout_height="35dp"
+            android:layout_height="48dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/botao_selecionavel"
+            android:background="@drawable/selecao_btn"
+            android:checked="true"
             android:textOff="13:00 - 14:00"
             android:textOn="13:00 - 14:00"
             app:layout_constraintStart_toStartOf="parent"
@@ -190,10 +193,11 @@
         <ToggleButton
             android:id="@+id/h5"
             android:layout_width="90dp"
-            android:layout_height="35dp"
+            android:layout_height="48dp"
             android:layout_marginStart="38dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/botao_selecionavel"
+            android:background="@drawable/selecao_btn"
+            android:checked="true"
             android:textOff="14:00 - 15:00"
             android:textOn="14:00 - 15:00"
             app:layout_constraintStart_toEndOf="@+id/h4"
@@ -204,12 +208,53 @@
             android:layout_width="363dp"
             android:layout_height="54dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="7dp"
             android:layout_marginEnd="24dp"
             android:gravity="center"
+            android:onClick="Confirmacao"
             android:text="reservar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/h5" />
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="357dp"
+            android:layout_height="119dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/cinza"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="text"
+            android:singleLine="false"
+            android:text="Escreva para seu guia"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView50" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="91dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText"
+            app:srcCompat="@drawable/jos_" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton2"
+            android:layout_width="92dp"
+            android:layout_height="85dp"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/jos_"
+            android:textOff="  "
+            android:textOn="  "
+            app:layout_constraintStart_toEndOf="@+id/textView53"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout></ScrollView>

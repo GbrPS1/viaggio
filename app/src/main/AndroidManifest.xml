@@ -12,6 +12,12 @@
         android:theme="@style/Theme.Viaggio.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".perfil_guia"
+            android:exported="false" />
+        <activity
+            android:name=".tl_perfilPago"
+            android:exported="false" />
+        <activity
             android:name=".HomeTurista"
             android:exported="false" />
         <activity
